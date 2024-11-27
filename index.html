@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pièces d'Auto en Solde</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header {
+      background-color:#e6f2ff;   /*url("media/xxxx.png") no-repeat center center/cover*/
+      color: white;
+      text-align: center;
+      padding: 20px 20px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    header p {
+      margin: 10px 0 0;
+      font-size: 1.2em;
+      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+    }
+    nav {
+      background-color: #004080;
+      color: white;
+      padding: 10px 0;
+      text-align: center;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+      .banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: #fff;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  .banner img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  .banner h2 {
+    margin-top: 45px;
+    font-size: 1.8em;
+    color: #004080;
+  }
+  .banner p {
+    font-size: 1.2em;
+    color: #666;
+  }
+    .hero {
+      text-align: center;
+      padding: 10px 10px;
+      background-color: #e6f2ff;
+    }
+    .hero h2 {
+      margin-bottom: 30px;
+    }
+    .search-bar select, .search-bar button {
+      padding: 10px;
+      margin: 5px;
+      font-size: 16px;
+    }
+    .featured {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin: 30px 20px;
+    }
+    .product-card {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      width: 300px;
+      margin: 10px;
+      text-align: center;
+      overflow: hidden;
+    }
+    .product-card img {
+      width: 100%;
+      height: auto;
+    }
+    .product-card h3 {
+      margin: 10px 0;
+    }
+    .product-card p {
+      margin: 0 10px 20px;
+      font-size: 1em;
+    }
+    .product-card button {
+      padding: 10px 20px;
+      margin-bottom: 15px;
+      background-color: #004080;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    .product-card button:hover {
+      background-color: #0066cc;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #333;
+      color: white;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Pièces d'Auto en Solde</h1>
+    <p>Des pièces d'auto de qualité à des prix abordables</p>
+  </header>
+  <nav>
+  <a href="index.html">Accueil</a>
+  <a href="#categories">Catégories</a>
+  <a href="pages/contact.html">Contact</a>
+  </nav>
+<section class="banner">
+  <img src="media/banner.jpg" alt="Special Offer Banner">
+  <h2>Les mêmes pièces que vos marques préférées, mais à des prix qui font la différence!</h2>
+  <p>Directement du manufacturier.</p>
+</section>
+  <div class="hero">
+    <h2>Trouvez les pièces pour votre véhicule</h2>
+    <div class="search-bar">
+      <select>
+        <option value="">Year</option>
+        <option>2023</option>
+        <option>2022</option>
+        <option>2021</option>
+      </select>
+      <select>
+        <option value="">Make</option>
+        <option>Toyota</option>
+        <option>Honda</option>
+        <option>Ford</option>
+      </select>
+      <select>
+        <option value="">Model</option>
+        <option>Camry</option>
+        <option>Civic</option>
+        <option>F-150</option>
+      </select>
+      <select>
+        <option value="">Submodel</option>
+        <option>Base</option>
+        <option>SE</option>
+        <option>Sport</option>
+      </select>
+      <button>Find My Part</button>
+    </div>
+  </div>
+  <section class="featured">
+    <div class="product-card">
+      <img src="media/brakepad.jpg" alt="Disc Brake Pad">
+      <h3>Plaquettes de Frein Premium</h3>
+      <p>Fiabilité et performance pour tous les budgets</p>
+      <button>Acheter</button>
+    </div>
+    <div class="product-card">
+      <img src="media/brakerotor.jpg" alt="Disc Brake Rotor">
+      <h3>Disques de Frein Économiques</h3>
+      <p>Parfaits pour vos réparations abordables</p>
+      <button>Acheter</button>
+    </div>
+    <div class="product-card">
+      <img src="media/strutassembly.jpg" alt="Suspension Strut and Coil Spring Assembly">
+      <h3>Suspensions Complètes</h3>
+      <p>Tout ce dont vous avez besoin à un prix réduit</p>
+      <button>Acheter</button>
+    </div>
+  </section>
+  <footer>
+    <p>info@piecesensolde.ca</p>
+    <p>&copy; 2024 Pièces d'Auto en Solde. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
