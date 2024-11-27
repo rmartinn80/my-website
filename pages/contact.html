@@ -103,15 +103,18 @@
   <section class="contact-section">
     <h2>Contactez-nous</h2>
     <p>Pour toute question ou demande, remplissez le formulaire ci-dessous.</p>
-<form action="send_email.php" method="POST">
+<form action="https://formsubmit.co/info@piecesensolde.ca" method="POST">
   <label for="name">Nom:</label>
-  <input type="text" id="name" name="name" placeholder="Votre nom" required>
+  <input type="text" id="name" name="name" placeholder="Nom" required>
 
   <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="Votre email" required>
+  <input type="email" id="email" name="email" placeholder="Email" required>
 
   <label for="message">Message:</label>
-  <textarea id="message" name="message" rows="5" placeholder="Votre message" required></textarea>
+  <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+  <!-- Hidden field for a custom email subject -->
+  <input type="hidden" name="_subject" value="Nouveau message du formulaire de contact">
 
   <button type="submit">Envoyer</button>
 </form>
