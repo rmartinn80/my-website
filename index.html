@@ -4,160 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pièces d'Auto en Solde</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color:#e6f2ff;   /*url("media/xxxx.png") no-repeat center center/cover*/
-      color: white;
-      text-align: center;
-      padding: 20px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2em;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-    nav {
-      background-color: #004080;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-      .banner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    margin: 0 auto;
-    width: 100%;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  .banner img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-  }
-  .banner h2 {
-    margin-top: 45px;
-    font-size: 1.8em;
-    color: #004080;
-  }
-  .banner p {
-    font-size: 1.2em;
-    color: #666;
-  }
-    .hero {
-      text-align: center;
-      padding: 10px 10px;
-      background-color: #e6f2ff;
-    }
-    .hero h2 {
-      margin-bottom: 30px;
-    }
-    .search-bar select, .search-bar button {
-      padding: 10px;
-      margin: 5px;
-      font-size: 16px;
-    }
-    .featured {
-      display: flex;
-      justify-content: space-around;
-      flex-wrap: wrap;
-      margin: 30px 20px;
-    }
-    .product-card {
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      width: 300px;
-      margin: 10px;
-      text-align: center;
-      overflow: hidden;
-    }
-    .product-card img {
-      width: 100%;
-      height: auto;
-    }
-    .product-card h3 {
-      margin: 10px 0;
-    }
-    .product-card p {
-      margin: 0 10px 20px;
-      font-size: 1em;
-    }
-    .product-card button {
-      padding: 10px 20px;
-      margin-bottom: 15px;
-      background-color: #004080;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-    .product-card button:hover {
-      background-color: #0066cc;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <h1>Pièces d'Auto en Solde</h1>
     <p>Des pièces d'auto de qualité à des prix abordables</p>
   </header>
-  <nav>
-  <a href="index.html">Accueil</a>
-  <a href="#categories">Catégories</a>
-  <a href="pages/contact.html">Contact</a>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="index.html">Accueil</a></li>
+      <li><a href="#categories">Catégories</a></li>
+      <li><a href="pages/contact.html">Contact</a></li>
+    </ul>
   </nav>
-<section class="banner">
-  <img src="media/banner.jpg" alt="Special Offer Banner">
-  <h2>Les mêmes pièces que vos marques préférées, mais à des prix qui font la différence!</h2>
-  <p>Sans emballages luxueux, sans coûts inutiles. Nous nous concentrons sur l'essentiel: des pièces auto de qualité à des prix imbattables.</p>
-</section>
-  <div class="hero">
+  <section class="banner">
+    <div class="banner-content">
+      <img src="media/banner.jpg" alt="Banner">
+      <h2>Les mêmes pièces que vos marques préférées, mais à des prix qui font la différence!</h2>
+      <p>Sans emballages luxueux, sans coûts inutiles. Nous nous concentrons sur l'essentiel: des pièces auto de qualité à des prix imbattables.</p>
+    </div>
+  </section>
+  <section class="hero">
     <h2>Trouvez les pièces pour votre véhicule</h2>
     <div class="search-bar">
       <select>
-        <option value="">Year</option>
+        <option value="">&nbsp;&nbsp;&nbsp;Year&nbsp;&nbsp;&nbsp;</option>
         <option>2023</option>
         <option>2022</option>
         <option>2021</option>
       </select>
       <select>
-        <option value="">Make</option>
+        <option value="">&nbsp;&nbsp;&nbsp;Make&nbsp;&nbsp;&nbsp;</option>
         <option>Toyota</option>
         <option>Honda</option>
         <option>Ford</option>
       </select>
       <select>
-        <option value="">Model</option>
+        <option value="">&nbsp;&nbsp;&nbsp;Model&nbsp;&nbsp;&nbsp;</option>
         <option>Camry</option>
         <option>Civic</option>
         <option>F-150</option>
@@ -170,7 +54,7 @@
       </select>
       <button>Find My Part</button>
     </div>
-  </div>
+  </section>
   <section class="featured">
     <div class="product-card">
       <img src="media/brakepad.jpg" alt="Disc Brake Pad">
@@ -191,9 +75,8 @@
       <button>Acheter</button>
     </div>
   </section>
-  <footer>
-    <p>info@piecesensolde.ca</p>
-    <p>&copy; 2024 Pièces d'Auto en Solde. Tous droits réservés.</p>
+  <footer class="footer">
+    <p>info@piecesensolde.ca | &copy; 2024 Pièces d'Auto en Solde. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
