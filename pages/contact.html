@@ -4,124 +4,41 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact - Pièces d'Auto en Solde</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f4f4f4;
-      color: #333;
-    }
-    header {
-      background-color: #e6f2ff;
-      color: white;
-      text-align: center;
-      padding: 20px 20px;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 3em;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-    header p {
-      margin: 10px 0 0;
-      font-size: 1.2em;
-      text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
-    }
-    nav {
-      background-color: #004080;
-      color: white;
-      padding: 10px 0;
-      text-align: center;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-      text-transform: uppercase;
-    }
-    .contact-section {
-      padding: 20px;
-      margin: 20px auto;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      max-width: 800px;
-    }
-    .contact-section h2 {
-      color: #004080;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .contact-section form {
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-    .contact-section form label {
-      font-weight: bold;
-    }
-    .contact-section form input,
-    .contact-section form textarea {
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 16px;
-    }
-    .contact-section form button {
-      background-color: #004080;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .contact-section form button:hover {
-      background-color: #0066cc;
-    }
-    footer {
-      text-align: center;
-      padding: 20px;
-      background-color: #333;
-      color: white;
-      margin-top: 20px;
-    }
-  </style>
+  <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
-  <header>
+  <header class="header">
     <h1>Pièces d'Auto en Solde</h1>
     <p>Des pièces d'auto de qualité à des prix abordables</p>
   </header>
-  <nav>
-  <a href="../index.html">Accueil</a>
-  <a href="#categories">Catégories</a>
-  <a href="contact.html">Contact</a>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="../index.html">Accueil</a></li>
+      <li><a href="#categories">Catégories</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
   </nav>
-  <section class="contact-section">
-    <h2>Contactez-nous</h2>
-    <p>Pour toute question ou demande, remplissez le formulaire ci-dessous.</p>
-<form action="https://formsubmit.co/info@piecesensolde.ca" method="POST">
-  <label for="name">Nom:</label>
-  <input type="text" id="name" name="name" placeholder="Nom" required>
+  <section class="contact-section container">
+    <h2 class="text-center">Contactez-nous</h2>
+    <p class="text-center">Pour toute question ou demande, remplissez le formulaire ci-dessous.</p>
+    <form action="https://formsubmit.co/info@piecesensolde.ca" method="POST" class="form">
+      <label for="name">Nom:</label>
+      <input type="text" id="name" name="name" placeholder="Nom" required>
 
-  <label for="email">Email:</label>
-  <input type="email" id="email" name="email" placeholder="Email" required>
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
 
-  <label for="message">Message:</label>
-  <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
 
-  <!-- Hidden field for a custom email subject -->
-  <input type="hidden" name="_subject" value="Website_Contact_Form">
+      <!-- Hidden field for a custom email subject -->
+      <input type="hidden" name="_subject" value="Website_Contact_Form">
 
-  <button type="submit">Envoyer</button>
-</form>
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
   </section>
-  <footer>
-    <p>info@piecesensolde.ca</p>
-    <p>&copy; 2024 Pièces d'Auto en Solde. Tous droits réservés.</p>
+  <footer class="footer">
+    <p>info@piecesensolde.ca | &copy; 2024 Pièces d'Auto en Solde. Tous droits réservés.</p>
   </footer>
 </body>
 </html>
