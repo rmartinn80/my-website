@@ -1,0 +1,240 @@
+/* CSS Variables */
+:root {
+  --primary-color: linear-gradient(145deg, #004080, #0073e6);
+  --secondary-color: #0066cc;
+  --third-color: #004080;
+  --text-color: #333;
+  --background-color: #f4f4f4;
+  --white: #fff;
+  --max-width: 1200px;
+  --padding: 20px;
+}
+
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Utility Classes */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--padding);
+}
+
+.text-center {
+  text-align: center;
+}
+
+/* Header */
+.header {
+  background: var(--primary-color);    /*url("media/xxxx.png") no-repeat center center/cover*/
+  color: var(--white);
+  text-align: center;
+  padding: 15px var(--padding);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+/* Navigation */
+.nav {
+  background: var(--third-color);
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+.nav-list li {
+  margin: 0 15px;
+}
+
+.nav-list a {
+  color: var(--white);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-list a:hover {
+  color: var(--secondary-color);
+}
+
+/* Banner */
+.banner {
+  background-color: #fff; /*background: url('media/banner.jpg') no-repeat center/cover*/
+  padding: 30px;
+  color: black;
+  text-align: center;
+}
+
+/* Hero Section */
+.hero {
+  background: var(--white);
+  padding: var(--padding);
+  text-align: center;
+}
+
+.search-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.search-bar select, .search-bar button {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-bar button {
+  background: var(--primary-color);
+  color: var(--white);
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.search-bar button:hover {
+  background: var(--secondary-color);
+}
+
+/* Featured Section */
+.featured {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 400px));
+  gap: 20px;
+  padding: var(--padding);
+  justify-content: center; /* Centers items horizontally */
+}
+
+.product-card {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 100%;
+}
+
+.product-card h3 {
+  margin: 15px 0;
+  color: var(--primary-color);
+}
+
+.product-card p {
+  padding: 0 15px 15px;
+}
+
+.product-card button {
+  padding: 10px;
+  margin-bottom: 15px;
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.product-card button:hover {
+  background: var(--secondary-color);
+}
+
+/* Footer */
+.footer {
+  background: var(--primary-color);
+  color: var(--white);
+  text-align: center;
+  padding: var(--padding);
+  font-size: 0.9em;
+}
+
+/* Contact Section */
+.contact-section {
+  background: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: var(--padding);
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.contact-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  margin-bottom: 20px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form label {
+  font-weight: bold;
+}
+
+.form input,
+.form textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.btn {
+  background: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: var(--secondary-color);
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search-bar select, .search-bar button {
+    flex: 1 1 calc(50% - 10px);
+  }
+
+  .search-bar button {
+    flex-basis: 100%;
+  }
+}
