@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact - Pièces d'Auto en Solde</title>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <header class="header">
+    <h1>Pièces d'Auto en Solde</h1>
+    <p>Des pièces d'auto de qualité à des prix abordables</p>
+  </header>
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="/">Accueil</a></li>
+      <li><a href="#categories">Catégories</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+  <section class="contact-section container">
+    <h2 class="text-center">Contactez-nous</h2>
+    <p class="text-center">Pour toute question ou demande, remplissez le formulaire ci-dessous.</p>
+    <form action="https://formsubmit.co/info@piecesensolde.ca" method="POST" class="form">
+      <label for="name">Nom:</label>
+      <input type="text" id="name" name="name" placeholder="Nom" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="Email" required>
+
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea>
+
+      <!-- Hidden field for a custom email subject -->
+      <input type="hidden" name="_subject" value="Website_Contact_Form">
+
+      <button type="submit" class="btn">Envoyer</button>
+    </form>
+  </section>
+  <footer class="footer">
+    <p>info@piecesensolde.ca | &copy; 2024 Pièces d'Auto en Solde. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
