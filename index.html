@@ -26,36 +26,45 @@
     </div>
   </section>
   <section class="hero">
-  <div class="container">
-    <h1 class=lookup-search>Vehicle Search</h1>
-    <form id="vehicle-form" class="vehicle-form">
-      <div class="form-group">
-        <label for="year">Year:</label>
-        <select id="year" class="dropdown"></select>
-      </div>
-
-      <div class="form-group">
-        <label for="make">Make:</label>
-        <select id="make" class="dropdown"></select>
-      </div>
-
-      <div class="form-group">
-        <label for="model">Model:</label>
-        <select id="model" class="dropdown"></select>
-      </div>
-
-      <div class="form-group">
-        <label for="submodel">Submodel:</label>
-        <select id="submodel" class="dropdown"></select>
-      </div>
-
-      <button type="button" class="btn" onclick="searchVehicle()">Search</button>
-    </form>
-
-    <div id="results" class="results"></div>
-  </div>
+    <div class="container">
+      <h1 class="lookup-search">Vehicle Search</h1>
+      <form id="vehicle-form" class="vehicle-form">
+        <!-- Year Dropdown -->
+        <div class="form-group">
+          <label for="year">Year:</label>
+          <select id="year" class="dropdown"></select>
+        </div>
+  
+        <!-- Make Dropdown -->
+        <div class="form-group">
+          <label for="make">Make:</label>
+          <select id="make" class="dropdown"></select>
+        </div>
+  
+        <!-- Model Dropdown -->
+        <div class="form-group">
+          <label for="model">Model:</label>
+          <select id="model" class="dropdown"></select>
+        </div>
+  
+        <!-- Submodel Dropdown -->
+        <div class="form-group">
+          <label for="submodel">Submodel:</label>
+          <select id="submodel" class="dropdown"></select>
+        </div>
+  
+        <!-- Search Button -->
+        <div class="form-group">
+          <button type="button" class="btn" onclick="searchVehicle()">Search</button>
+        </div>
+      </form>
+  
+      <!-- Results Section -->
+      <div id="results" class="results"></div>
+    </div>
     <script src="script.js"></script>
   </section>
+  
   <section class="featured">
     <div class="product-card">
       <img src="media/brakepad.jpg" alt="Disc Brake Pad">

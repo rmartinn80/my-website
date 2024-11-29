@@ -77,7 +77,6 @@ function displayResults(results) {
     itemDiv.className = 'result-item';
 
     const content = `
-      <h3>${result.Year} ${result.Make} ${result.Model} ${result.Submodel}</h3>
       <p>Position: ${result.Position || "N/A"}</p>
       <p>Part Number: ${result.PartNumber || "No part available"}</p>
       <img src="${result.Image || placeholderImage}" alt="Product Image" style="max-width: 200px;">

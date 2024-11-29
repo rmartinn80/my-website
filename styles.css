@@ -254,23 +254,31 @@ body {
   color: #333;
 }
 
+/* Vehicle Form Layout */
 .vehicle-form {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Evenly distribute items */
+  align-items: center; /* Center all items (labels, dropdowns, and button) vertically */
+  gap: 20px; /* Add spacing between fields */
 }
 
 .form-group {
+  flex: 1 1 calc(25% - 20px); /* Four items per row with gaps */
+  min-width: 150px;
+  max-width: 200px;
   display: flex;
-  flex-direction: column;
+  flex-direction: column; /* Keep label above dropdown */
 }
 
 label {
   font-size: 14px;
   margin-bottom: 5px;
+  text-align: left;
 }
 
 .dropdown {
+  width: 100%; /* Fill container */
   padding: 10px;
   font-size: 14px;
   border: 1px solid #ddd;
@@ -279,20 +287,19 @@ label {
 }
 
 .btn {
-  background-color: #007bff;
-  color: #fff;
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
+  flex: 1 1 calc(25% - 20px); /* Matches dropdown size */
+  max-width: 200px;
+  height: calc(100% - 5px); /* Align with dropdown and label height */
+  margin-top: 22px; /* Align with dropdown labels */
   text-align: center;
+  align-self: flex-start; /* Ensure alignment at the top */
 }
 
 .btn:hover {
   background-color: #0056b3;
 }
 
+/* Results Section */
 .results {
   margin-top: 20px;
 }
@@ -303,14 +310,40 @@ label {
   padding: 15px;
   margin-bottom: 15px;
   background: #fafafa;
+  text-align: center; /* Centers the text and image */
 }
 
-.result-item h3 {
-  margin-top: 0;
+.result-item img {
+  max-width: 200px;
+  margin: 10px auto 0; /* Adds spacing and centers the image */
+  display: block; /* Ensures the image behaves like a block element */
 }
 
 .result-item img {
   max-width: 100px;
   margin-top: 10px;
   display: block;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .vehicle-form {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form-group {
+    flex: 1 1 100%;
+    max-width: 300px;
+    text-align: center;
+  }
+
+  .dropdown {
+    width: 100%; /* Ensure the dropdown fills its container */
+  }
+
+  .btn {
+    max-width: 300px;
+    align-self: center; /* Center the button on mobile */
+  }
 }
