@@ -112,7 +112,7 @@ function displayResults(results) {
     }
 
     content += `
-      <p>Part Status: ${result.PartNumber ? "Available" : "No part available"}</p>
+      <p>Status: ${result.PartNumber ? "Available" : "No part available"}</p>
       <img src="${result.Image || placeholderImage}" alt="Product Image" style="max-width: 200px;">
     `;
 
